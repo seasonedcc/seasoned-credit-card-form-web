@@ -1,0 +1,20 @@
+{
+  "name": "seasoned-credit-card-form-web-example",
+  "homepage": "https://giovanisleite.github.io/seasoned-credit-card-form-web",
+  "version": "0.0.0",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "prop-types": "^15.6.2",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-scripts": "^1.1.4",
+    "seasoned-credit-card-form-web": "link:.."
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
