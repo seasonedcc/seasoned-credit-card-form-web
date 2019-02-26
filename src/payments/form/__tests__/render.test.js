@@ -17,26 +17,17 @@ const values = {
   cvc: '',
 }
 
-const props = {
-  id: 1,
-  token: 'abababa',
-  channel: 'whatsapp',
-  text: 'paga nois',
-  list: [],
-  offer: {
-    consumer: {
-      fullName: 'foo',
-    },
-    discount: 50,
-    valueToPay: 200,
-    originalValue: 250,
-    valueWithInterest: 350,
-    contractNumber: '123',
-  },
+const formikProps = {
+  values,
+  handleChange: jest.fn(),
+  errors: {},
+  touched: {},
 }
+
+const props = {}
 
 it('renders correctly', () => {
   const Form = render(props)
-  const tree = renderer.create(<Form values={values} />).toJSON()
+  const tree = renderer.create(<Form {...formikProps} />).toJSON()
   expect(tree).toMatchSnapshot()
 })

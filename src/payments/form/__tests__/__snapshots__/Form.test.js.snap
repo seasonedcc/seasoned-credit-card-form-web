@@ -85,56 +85,56 @@ exports[`renders correctly with one card 1`] = `
   >
     <div
       autoFocus={true}
-      errors={undefined}
+      errors={Object {}}
       fullWidth={true}
       handleBlur={undefined}
-      handleChange={undefined}
+      handleChange={[Function]}
       label="Nome impresso no cartão de crédito"
       name="name"
       onFocus={[Function]}
       setFieldValue={undefined}
-      touched={undefined}
+      touched={Object {}}
       type="text"
       value=""
     >
       Field
     </div>
     <div
-      errors={undefined}
+      errors={Object {}}
       fullWidth={true}
       handleBlur={undefined}
-      handleChange={undefined}
+      handleChange={[Function]}
       label="Número do cartão de crédito"
       mask="9999 9999 9999 9999"
       name="number"
       onFocus={[Function]}
       setFieldValue={undefined}
-      touched={undefined}
+      touched={Object {}}
       type="text"
       value=""
     >
       Field
     </div>
     <div
-      errors={undefined}
+      errors={Object {}}
       handleBlur={undefined}
-      handleChange={undefined}
+      handleChange={[Function]}
       label="Data de expiração"
       mask="99/99"
       name="expiry"
       onFocus={[Function]}
       placeholder="MM/AA"
       setFieldValue={undefined}
-      touched={undefined}
+      touched={Object {}}
       type="text"
       value=""
     >
       Field
     </div>
     <div
-      errors={undefined}
+      errors={Object {}}
       handleBlur={undefined}
-      handleChange={undefined}
+      handleChange={[Function]}
       label="Código de segurança"
       mask="9999"
       maskChar=""
@@ -142,7 +142,7 @@ exports[`renders correctly with one card 1`] = `
       onFocus={[Function]}
       placeholder="Ex: 123"
       setFieldValue={undefined}
-      touched={undefined}
+      touched={Object {}}
       type="text"
       value=""
     >

@@ -18,8 +18,9 @@ const values = {
 }
 
 const props = {
-  id: 1,
-  token: 'abababa',
+  handleChange: jest.fn(),
+  errors: {},
+  touched: {},
 }
 
 const tree = renderer.create(<Form {...props} values={values} />)
@@ -35,6 +36,6 @@ it('binded onFocus change his state', () => {
   const target = { id: 'powpow' }
   let instance = tree.getInstance()
   expect(instance.state.focused).toEqual('')
-  instance.commonProperties().onFocus({ target })
+  instance.onFocus({ target })
   expect(instance.state.focused).toEqual(target.id)
 })
