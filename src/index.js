@@ -1,22 +1,5 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+import LocalPaymentForm from './payments/PaymentForm'
 
-import styles from './styles.css'
+const PaymentForm = LocalPaymentForm
 
-export default class ExampleComponent extends Component {
-  static propTypes = {
-    text: PropTypes.string
-  }
-
-  render() {
-    const {
-      text
-    } = this.props
-
-    return (
-      <div className={styles.test}>
-        Example Component: {text}
-      </div>
-    )
-  }
-}
+export { PaymentForm }
