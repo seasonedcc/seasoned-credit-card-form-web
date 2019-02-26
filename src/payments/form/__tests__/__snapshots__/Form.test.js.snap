@@ -149,31 +149,36 @@ exports[`renders correctly with one card 1`] = `
       Field
     </div>
   </div>
-  <button
-    className="MuiButtonBase-root-124 MuiButton-root-98 MuiButton-contained-109 MuiButton-containedPrimary-110 MuiButton-raised-112 MuiButton-raisedPrimary-113"
-    disabled={false}
-    onBlur={[Function]}
-    onContextMenu={[Function]}
-    onFocus={[Function]}
-    onKeyDown={[Function]}
-    onKeyUp={[Function]}
-    onMouseDown={[Function]}
-    onMouseLeave={[Function]}
-    onMouseUp={[Function]}
-    onTouchEnd={[Function]}
-    onTouchMove={[Function]}
-    onTouchStart={[Function]}
-    tabIndex="0"
-    type="submit"
+  <div
+    className="MuiGrid-container-1 MuiGrid-justify-xs-center-18"
   >
-    <span
-      className="MuiButton-label-99"
+    <button
+      className="MuiButtonBase-root-124 MuiButton-root-98 MuiButton-contained-109 MuiButton-containedPrimary-110 MuiButton-raised-112 MuiButton-raisedPrimary-113"
+      disabled={false}
+      onBlur={[Function]}
+      onContextMenu={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      style={undefined}
+      tabIndex="0"
+      type="submit"
     >
-      Finalizar
-    </span>
-    <span
-      className="MuiTouchRipple-root-127"
-    />
-  </button>
+      <span
+        className="MuiButton-label-99"
+      >
+        Finalizar
+      </span>
+      <span
+        className="MuiTouchRipple-root-127"
+      />
+    </button>
+  </div>
 </div>
 `;
