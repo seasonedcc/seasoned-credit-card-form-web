@@ -24,6 +24,8 @@ export default (class extends Component {
 
   commonProperties() {
     return {
+      touched: this.props.touched,
+      errors: this.props.errors,
       handleChange: this.props.handleChange,
       handleBlur: this.props.handleBlur,
       setFieldValue: this.props.setFieldValue,
@@ -34,17 +36,17 @@ export default (class extends Component {
   renderFields() {
     return (
       <Grid container justify={'space-between'} style={{ margin: '30px 0' }}>
-        {filter(fields(this.props)).map(element => (
-          <Field
-            key={element.name}
-            touched={this.props.touched}
-            errors={this.props.errors}
-            type={element.type || 'text'}
-            value={this.props.values[element.name]}
-            {...element}
-            {...this.commonProperties()}
-          />
-        ))}
+        {filter(fields(this.props)).map(element => {
+          return (
+            <Field
+              key={element.name}
+              type={element.type || 'text'}
+              value={this.props.values[element.name]}
+              {...element}
+              {...this.commonProperties()}
+            />
+          )
+        })}
       </Grid>
     )
   }
