@@ -22,8 +22,8 @@ export default props => {
               return (
                 <Grid container justify="center">
                   <PaymentForm
-                    create={create}
-                    creating={creating}
+                    onSubmit={create}
+                    submitting={creating}
                     error={error}
                   />
                 </Grid>

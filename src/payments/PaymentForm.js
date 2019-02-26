@@ -3,7 +3,7 @@ import { Formik } from 'formik'
 import renderForm from './form/render'
 import validate from './form/validate'
 
-export default ({ create, creating, error, ...props }) => {
+export default ({ onSubmit, submitting, error, ...props }) => {
   return (
     <Formik
       initialValues={{
@@ -13,8 +13,8 @@ export default ({ create, creating, error, ...props }) => {
         cvc: '',
       }}
       validate={validate(props)}
-      onSubmit={create}
-      render={renderForm({ ...props, creating, error })}
+      onSubmit={onSubmit}
+      render={renderForm({ ...props, submitting, error })}
     />
   )
 }

@@ -50,7 +50,7 @@ export default (class extends Component {
   }
 
   render() {
-    const { error, creating } = this.props
+    const { error, submitting } = this.props
 
     return (
       <Form>
