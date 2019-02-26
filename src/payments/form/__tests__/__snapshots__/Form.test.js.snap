@@ -1,0 +1,179 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly with one card 1`] = `
+<div>
+  <div>
+    <div
+      className="rccs"
+    >
+      <div
+        className="rccs__card rccs__card--unknown"
+      >
+        <div
+          className="rccs__card--front"
+        >
+          <div
+            className="rccs__card__background"
+          />
+          <div
+            className="rccs__issuer"
+          />
+          <div
+            className="rccs__cvc__front"
+          >
+            
+          </div>
+          <div
+            className="rccs__number"
+          >
+            •••• •••• •••• ••••
+          </div>
+          <div
+            className="rccs__name"
+          >
+            Seu nome
+          </div>
+          <div
+            className="rccs__expiry"
+          >
+            <div
+              className="rccs__expiry__valid"
+            >
+              valid thru
+            </div>
+            <div
+              className="rccs__expiry__value"
+            >
+              ••/••
+            </div>
+          </div>
+          <div
+            className="rccs__chip"
+          />
+        </div>
+        <div
+          className="rccs__card--back"
+        >
+          <div
+            className="rccs__card__background"
+          />
+          <div
+            className="rccs__stripe"
+          />
+          <div
+            className="rccs__signature"
+          />
+          <div
+            className="rccs__cvc"
+          >
+            
+          </div>
+          <div
+            className="rccs__issuer"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="MuiGrid-container-1 MuiGrid-justify-xs-space-between-20"
+    style={
+      Object {
+        "margin": "30px 0",
+      }
+    }
+  >
+    <div
+      autoFocus={true}
+      errors={undefined}
+      fullWidth={true}
+      handleBlur={undefined}
+      handleChange={undefined}
+      label="Nome impresso no cartão de crédito"
+      name="name"
+      onFocus={[Function]}
+      setFieldValue={undefined}
+      touched={undefined}
+      type="text"
+      value=""
+    >
+      Field
+    </div>
+    <div
+      errors={undefined}
+      fullWidth={true}
+      handleBlur={undefined}
+      handleChange={undefined}
+      label="Número do cartão de crédito"
+      mask="9999 9999 9999 9999"
+      name="number"
+      onFocus={[Function]}
+      setFieldValue={undefined}
+      touched={undefined}
+      type="text"
+      value=""
+    >
+      Field
+    </div>
+    <div
+      errors={undefined}
+      handleBlur={undefined}
+      handleChange={undefined}
+      label="Data de expiração"
+      mask="99/99"
+      name="expiry"
+      onFocus={[Function]}
+      placeholder="MM/AA"
+      setFieldValue={undefined}
+      touched={undefined}
+      type="text"
+      value=""
+    >
+      Field
+    </div>
+    <div
+      errors={undefined}
+      handleBlur={undefined}
+      handleChange={undefined}
+      label="Código de segurança"
+      mask="9999"
+      maskChar=""
+      name="cvc"
+      onFocus={[Function]}
+      placeholder="Ex: 123"
+      setFieldValue={undefined}
+      touched={undefined}
+      type="text"
+      value=""
+    >
+      Field
+    </div>
+  </div>
+  <button
+    className="MuiButtonBase-root-124 MuiButton-root-98 MuiButton-contained-109 MuiButton-containedPrimary-110 MuiButton-raised-112 MuiButton-raisedPrimary-113"
+    disabled={false}
+    onBlur={[Function]}
+    onContextMenu={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    onMouseLeave={[Function]}
+    onMouseUp={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    tabIndex="0"
+    type="submit"
+  >
+    <span
+      className="MuiButton-label-99"
+    >
+      Finalizar
+    </span>
+    <span
+      className="MuiTouchRipple-root-127"
+    />
+  </button>
+</div>
+`;

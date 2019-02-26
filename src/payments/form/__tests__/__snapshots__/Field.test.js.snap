@@ -1,0 +1,118 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly with errors 1`] = `
+<fieldset
+  className="MuiFormControl-root-1"
+  id="abc-fieldset"
+>
+  <div>
+    <div
+      autoFocus={undefined}
+      component={[Function]}
+      disabled={undefined}
+      error={true}
+      id="abc"
+      inputComponent={undefined}
+      inputProps={Object {}}
+      name="abc"
+      onBlur={undefined}
+      onChange={[Function]}
+      onFocus={undefined}
+      placeholder={undefined}
+      type={undefined}
+      value={undefined}
+    >
+      Field
+    </div>
+    <p
+      className="MuiFormHelperText-root-23 MuiFormHelperText-error-24"
+    >
+      Y
+    </p>
+  </div>
+  <div>
+    <label
+      className="MuiFormLabel-root-16 MuiFormLabel-error-19 MuiInputLabel-error-8 MuiInputLabel-root-5 MuiInputLabel-formControl-10 MuiInputLabel-animated-13"
+      data-shrink={false}
+      htmlFor="abc"
+    />
+    <div
+      autoFocus={undefined}
+      component={[Function]}
+      error={true}
+      id="abc"
+      inputComponent={undefined}
+      inputProps={Object {}}
+      name="abc"
+      onBlur={undefined}
+      onChange={[Function]}
+      onFocus={undefined}
+      placeholder={undefined}
+      type={undefined}
+      value={undefined}
+    >
+      Field
+    </div>
+    <p
+      className="MuiFormHelperText-root-23 MuiFormHelperText-error-24"
+    >
+      Y
+    </p>
+  </div>
+</fieldset>
+`;
+
+exports[`renders correctly without errors 1`] = `
+<fieldset
+  className="MuiFormControl-root-1"
+  id="undefined-fieldset"
+>
+  <div>
+    <div
+      autoFocus={undefined}
+      component={[Function]}
+      disabled={undefined}
+      error={false}
+      id={undefined}
+      inputComponent={undefined}
+      inputProps={Object {}}
+      name={undefined}
+      onBlur={undefined}
+      onChange={[Function]}
+      onFocus={undefined}
+      placeholder={undefined}
+      type={undefined}
+      value={undefined}
+    >
+      Field
+    </div>
+  </div>
+  <div>
+    <label
+      className="MuiFormLabel-root-16 MuiInputLabel-root-5 MuiInputLabel-formControl-10 MuiInputLabel-animated-13"
+      data-shrink={false}
+      htmlFor={undefined}
+    />
+    <div
+      autoFocus={undefined}
+      component={[Function]}
+      error={false}
+      id={undefined}
+      inputComponent={undefined}
+      inputProps={Object {}}
+      name={undefined}
+      onBlur={undefined}
+      onChange={[Function]}
+      onFocus={undefined}
+      placeholder={undefined}
+      type={undefined}
+      value={undefined}
+    >
+      Field
+    </div>
+    <p
+      className="MuiFormHelperText-root-23"
+    />
+  </div>
+</fieldset>
+`;
