@@ -66,10 +66,8 @@ export default (class extends Component {
         </div>
         {this.renderFields()}
         {error && <Error>{error}</Error>}
-        <Button isSubmitting={this.props.isSubmitting} creating={creating} />
-        {(this.props.isSubmitting || creating) && (
-          <Loading style={{ alignSelf: 'flex-end' }} />
-        )}
+        {submitting && <Loading style={{ alignSelf: 'center' }} />}
+        <Button disabled={submitting} />
       </Form>
     )
   }

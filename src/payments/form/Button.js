@@ -3,14 +3,14 @@ import { Button } from '@material-ui/core'
 
 export default class extends Component {
   render() {
-    const { creating, isSubmitting } = this.props
+    const { disabled } = this.props
 
     return (
       <Button
         variant="contained"
         color="primary"
         type="submit"
-        disabled={isSubmitting || creating}
+        disabled={disabled}
       >
         Finalizar
       </Button>
