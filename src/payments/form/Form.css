@@ -1,0 +1,65 @@
+.distance-fields {
+  max-width: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.distance-fields fieldset {
+  vertical-align: top;
+}
+
+.distance-fields button {
+  margin-top: 20px;
+}
+
+.credit-card {
+  margin: 20px auto;
+}
+
+#value-fieldset input {
+  padding-left: 25px;
+}
+
+#value-fieldset::before {
+  content: 'R$';
+  left: 0;
+  position: absolute;
+  top: 20px;
+  font-family: 'Open Sans';
+  color: #888;
+}
+
+@media (max-width: 425px) {
+  .distance-fields {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .distance-fields button {
+    position: fixed;
+    bottom: 0;
+    display: block;
+    margin: 0;
+    box-sizing: border-box;
+    left: 0;
+    z-index: 2;
+  }
+
+  .distance-fields fieldset {
+    flex: 1;
+  }
+
+  fieldset {
+    order: 0;
+  }
+
+  .credit-card {
+    order: 1;
+  }
+
+  .dialog {
+    padding: 10px;
+  }
+}
