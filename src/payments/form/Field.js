@@ -10,8 +10,6 @@ import {
   FormHelperText,
 } from '@material-ui/core'
 
-import onChange from './onChange'
-
 export default props => {
   const { errors, touched, name, mask, maskChar, placeholder } = props
   const error = touched && touched[name] && errors && errors[name]
@@ -29,7 +27,7 @@ export default props => {
           <Field
             type={props.type}
             name={name}
-            onChange={onChange(props)}
+            onChange={props.handleChange}
             onBlur={props.handleBlur}
             onFocus={props.onFocus}
             disabled={props.disabled}
@@ -55,7 +53,7 @@ export default props => {
           <Field
             type={props.type}
             name={name}
-            onChange={onChange(props)}
+            onChange={props.handleChange}
             onBlur={props.handleBlur}
             onFocus={props.onFocus}
             id={name}

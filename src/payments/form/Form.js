@@ -11,7 +11,7 @@ import Field from './Field'
 import fields from './fields'
 import onFocus from './onFocus'
 
-export default (class extends Component {
+export default class extends Component {
   constructor(props) {
     super(props)
 
@@ -22,16 +22,21 @@ export default (class extends Component {
     this.onFocus = onFocus.bind(this)
   }
 
-  commonProperties() {
-    return {
-      touched: this.props.touched,
-      errors: this.props.errors,
-      handleChange: this.props.handleChange,
-      handleBlur: this.props.handleBlur,
-      setFieldValue: this.props.setFieldValue,
-      onFocus: target => this.onFocus(target),
-    }
-  }
+  commonProperties = ({
+    touched,
+    errors,
+    handleChange,
+    handleBlur,
+    setFieldValue,
+    onFocus,
+  }) => ({
+    touched,
+    errors,
+    handleChange,
+    handleBlur,
+    setFieldValue,
+    onFocus,
+  })
 
   renderFields() {
     return (
@@ -43,7 +48,10 @@ export default (class extends Component {
               type={element.type || 'text'}
               value={this.props.values[element.name]}
               {...element}
-              {...this.commonProperties()}
+              {...this.commonProperties({
+                onFocus: this.onFocus,
+                ...this.props,
+              })}
             />
           )
         })}
@@ -73,4 +81,4 @@ export default (class extends Component {
       </Form>
     )
   }
-})
+}
