@@ -79,6 +79,7 @@ export default class extends Component {
         {submitting && <Loading style={{ alignSelf: 'center' }} />}
         <Grid container justify="center">
           <Button
+            text={this.props.buttonMessage}
             disabled={
               submitting || Object.entries(this.props.errors).length > 0
             }
