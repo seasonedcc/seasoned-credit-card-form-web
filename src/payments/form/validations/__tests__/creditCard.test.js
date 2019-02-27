@@ -1,4 +1,4 @@
-import { cardType } from '../creditCard'
+import { cardType, acceptBrand } from '../creditCard'
 
 it('return null if number is less than 6 digits', () => {
   const type = cardType('63629')
@@ -33,4 +33,16 @@ it('show DINERS', () => {
 it('show HIPERCARD', () => {
   const type = cardType('6062825624254001')
   expect(type).toEqual('HIPERCARD')
+})
+
+describe('validates if the card type is accepted', () => {
+  it('returns true', () => {
+    const accepted = acceptBrand(['visa'])('4242424242424242')
+    expect(accepted).toBeTruthy()
+  })
+
+  it('returns false when just visa is accepted and enters a hipercard number ', () => {
+    const accepted = acceptBrand(['visa'])('6062825624254001')
+    expect(accepted).toBeFalsy()
+  })
 })

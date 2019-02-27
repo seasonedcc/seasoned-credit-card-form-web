@@ -81,3 +81,23 @@ it('test hipercard number', () => {
 
   expect(errors.number).toBeUndefined()
 })
+
+it('validate a hipercard number when hipercard its accepted', () => {
+  const values = {
+    number: '6062826786276634',
+  }
+
+  const errors = validate({ acceptedCards: ['hipercard'] })(values)
+
+  expect(errors.number).toBeUndefined()
+})
+
+it('get errors when a hipercard number enters and hipercard is not accepted', () => {
+  const values = {
+    number: '6062826786276634',
+  }
+
+  const errors = validate({ acceptedCards: ['visa'] })(values)
+
+  expect(errors.number).toEqual('Bandeira não aceita')
+})

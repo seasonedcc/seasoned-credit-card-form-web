@@ -1,11 +1,11 @@
 import { required, length } from 'redux-form-validators'
-import { cardNumber, cardExpiry } from './validations/validations'
+import { cardNumber, cardExpiry, cardBrand } from './validations/validations'
 import generateValidate from './generateValidate'
 import { normalizeField } from './validations/creditCard'
 
-const createValidations = props => ({
+const createValidations = ({ acceptedCards }) => ({
   name: [required()],
-  number: [required(), cardNumber],
+  number: [required(), cardNumber, cardBrand(acceptedCards)],
   expiry: [required(), length({ min: 5, max: 5 }), cardExpiry],
   cvc: [required(), length({ min: 3, max: 4 })],
   value: [required()],

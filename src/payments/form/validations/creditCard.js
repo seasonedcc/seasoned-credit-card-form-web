@@ -13,6 +13,7 @@ export const cardType = (number, strict = false) => {
 
 export const validCardNumber = number => {
   const type = cardType(number, true)
+
   if (!type) {
     return false
   }
@@ -23,6 +24,12 @@ export const validCardNumber = number => {
   }
 
   return luhn.validate(normalizeField(number))
+}
+
+export const acceptBrand = brands => number => {
+  return brands && brands.length > 0
+    ? brands.map(b => b.toUpperCase()).includes(cardType(number, true))
+    : true
 }
 
 const validMonth = month => month > 0 && month < 13
