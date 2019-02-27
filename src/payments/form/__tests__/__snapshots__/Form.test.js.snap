@@ -85,64 +85,44 @@ exports[`renders correctly with one card 1`] = `
   >
     <div
       autoFocus={true}
-      errors={undefined}
       fullWidth={true}
-      handleBlur={undefined}
-      handleChange={undefined}
       label="Nome impresso no cartão de crédito"
       name="name"
       onFocus={[Function]}
-      setFieldValue={undefined}
-      touched={undefined}
       type="text"
       value=""
     >
       Field
     </div>
     <div
-      errors={undefined}
       fullWidth={true}
-      handleBlur={undefined}
-      handleChange={undefined}
       label="Número do cartão de crédito"
       mask="9999 9999 9999 9999"
       name="number"
       onFocus={[Function]}
-      setFieldValue={undefined}
-      touched={undefined}
       type="text"
       value=""
     >
       Field
     </div>
     <div
-      errors={undefined}
-      handleBlur={undefined}
-      handleChange={undefined}
       label="Data de expiração"
       mask="99/99"
       name="expiry"
       onFocus={[Function]}
       placeholder="MM/AA"
-      setFieldValue={undefined}
-      touched={undefined}
       type="text"
       value=""
     >
       Field
     </div>
     <div
-      errors={undefined}
-      handleBlur={undefined}
-      handleChange={undefined}
       label="Código de segurança"
       mask="9999"
       maskChar=""
       name="cvc"
       onFocus={[Function]}
       placeholder="Ex: 123"
-      setFieldValue={undefined}
-      touched={undefined}
       type="text"
       value=""
     >
