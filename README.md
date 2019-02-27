@@ -38,4 +38,4 @@ const Example = props => {
 
 ## License
 
-MIT © [giovanisleite](https://github.com/giovanisleite)
+MIT © [SeasonedSoftware](https://github.com/SeasonedSoftware)
