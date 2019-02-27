@@ -60,16 +60,17 @@ export default class extends Component {
   }
 
   render() {
-    const { error, submitting } = this.props
+    const { error, submitting, values, buttonMessage, errors } = this.props
+    const disabled = submitting || Object.entries(errors).length > 0
 
     return (
       <Form>
         <div>
           <Cards
-            number={this.props.values.number}
-            name={this.props.values.name}
-            expiry={this.props.values.expiry}
-            cvc={this.props.values.cvc}
+            number={values.number}
+            name={values.name}
+            expiry={values.expiry}
+            cvc={values.cvc}
             focused={this.state.focused}
             placeholders={{ name: 'Seu nome' }}
           />
@@ -77,9 +78,9 @@ export default class extends Component {
         {this.renderFields()}
         {error && <Error>{error}</Error>}
         {submitting && <Loading style={{ alignSelf: 'center' }} />}
-        <Button
-          disabled={submitting || Object.entries(this.props.errors).length > 0}
-        />
+        <Grid container justify="center">
+          <Button text={buttonMessage} disabled={disabled} />
+        </Grid>
       </Form>
     )
   }
