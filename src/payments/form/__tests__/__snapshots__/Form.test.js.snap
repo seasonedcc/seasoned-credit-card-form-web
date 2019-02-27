@@ -85,44 +85,56 @@ exports[`renders correctly with one card 1`] = `
   >
     <div
       autoFocus={true}
+      errors={Object {}}
       fullWidth={true}
+      handleChange={[MockFunction]}
       label="Nome impresso no cartão de crédito"
       name="name"
       onFocus={[Function]}
+      touched={Object {}}
       type="text"
       value=""
     >
       Field
     </div>
     <div
+      errors={Object {}}
       fullWidth={true}
+      handleChange={[MockFunction]}
       label="Número do cartão de crédito"
       mask="9999 9999 9999 9999"
       name="number"
       onFocus={[Function]}
+      touched={Object {}}
       type="text"
       value=""
     >
       Field
     </div>
     <div
+      errors={Object {}}
+      handleChange={[MockFunction]}
       label="Data de expiração"
       mask="99/99"
       name="expiry"
       onFocus={[Function]}
       placeholder="MM/AA"
+      touched={Object {}}
       type="text"
       value=""
     >
       Field
     </div>
     <div
+      errors={Object {}}
+      handleChange={[MockFunction]}
       label="Código de segurança"
       mask="9999"
       maskChar=""
       name="cvc"
       onFocus={[Function]}
       placeholder="Ex: 123"
+      touched={Object {}}
       type="text"
       value=""
     >
