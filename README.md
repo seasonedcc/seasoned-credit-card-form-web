@@ -20,20 +20,16 @@ import 'react-credit-cards/es/styles-compiled.css'
 
 const theme = createMuiTheme({})
 
-const Example = props => {
-  render () {
-    return (
-      <MuiThemeProvider theme={theme}>
-        <PaymentForm
-          onSubmit={(values) => doSomething(values)}
-          submitting={false}
-          error={serverError}
-          acceptedCards={['visa', 'amex', 'elo', 'mastercard', 'diners', 'hipercard']}
-        />
-      </MuiThemeProvider>
-    )
-  }
-}
+const Example = props => (
+  <MuiThemeProvider theme={theme}>
+    <PaymentForm
+      onSubmit={values => doSomething(values)}
+      submitting={false}
+      error={serverError}
+      acceptedCards={['visa', 'amex', 'elo', 'mastercard', 'diners', 'hipercard']}
+    />
+  </MuiThemeProvider>
+)
 ```
 
 ## License
