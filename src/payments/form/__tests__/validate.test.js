@@ -15,10 +15,10 @@ it('show errors of fields required', () => {
 
   const errors = validate(props)(values)
 
-  expect(errors.name).toEqual('Campo obrigatório')
-  expect(errors.number).toEqual('Campo obrigatório')
-  expect(errors.cvc).toEqual('Campo obrigatório')
-  expect(errors.expiry).toEqual('Campo obrigatório')
+  expect(errors.name).toEqual('is required')
+  expect(errors.number).toEqual('is required')
+  expect(errors.cvc).toEqual('is required')
+  expect(errors.expiry).toEqual('is required')
 })
 
 it('show error if length is not correct', () => {
@@ -31,9 +31,9 @@ it('show error if length is not correct', () => {
 
   const errors = validate(props)(values)
 
-  expect(errors.number).toEqual('Número inválido')
-  expect(errors.cvc).toEqual('Ex: 123')
-  expect(errors.expiry).toEqual('Ex: MM/AA')
+  expect(errors.number).toEqual('invalid number')
+  expect(errors.cvc).toEqual('it must have 3 or 4 digits. E.g.: 123 or 1234')
+  expect(errors.expiry).toEqual('e.g.: MM/AA')
 })
 
 it('show error if expiry is expired', () => {
@@ -43,7 +43,7 @@ it('show error if expiry is expired', () => {
 
   const errors = validate(props)(values)
 
-  expect(errors.expiry).toEqual('Cartão vencido')
+  expect(errors.expiry).toEqual('your card is expired')
 })
 
 it('show error if number is invalid', () => {
@@ -53,7 +53,7 @@ it('show error if number is invalid', () => {
 
   const errors = validate(props)(values)
 
-  expect(errors.number).toEqual('Número inválido')
+  expect(errors.number).toEqual('invalid number')
 })
 
 it('all valid master', () => {
@@ -99,5 +99,5 @@ it('get errors when a hipercard number enters and hipercard is not accepted', ()
 
   const errors = validate({ acceptedCards: ['visa'] })(values)
 
-  expect(errors.number).toEqual('Bandeira não aceita')
+  expect(errors.number).toEqual('your card is not supported')
 })

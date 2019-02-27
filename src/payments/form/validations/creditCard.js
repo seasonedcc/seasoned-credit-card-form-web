@@ -58,7 +58,9 @@ export const validCardExpiry = (monthString, yearString) => {
   const month = parseInt(monthString, 10)
   const year = cardYear(yearString)
 
-  return validMonth(month) && year && !expiredCard(month, year)
+  return yearString
+    ? validMonth(month) && year && !expiredCard(month, year)
+    : false
 }
 
 const expiredCard = (month, year) => {
