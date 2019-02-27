@@ -1,13 +1,37 @@
-import React, { Component } from 'react'
+import React from 'react'
+import { Provider } from 'react-redux'
+import { New, Provider as CroodsProvider } from 'croods'
+import Grid from '@material-ui/core/Grid'
+import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles'
+import 'react-credit-cards/es/styles-compiled.css'
 
-import ExampleComponent from 'seasoned-credit-card-form-web'
+import { PaymentForm } from 'seasoned-credit-card-form-web'
 
-export default class App extends Component {
-  render() {
-    return (
-      <div>
-        <ExampleComponent text="Modern React component module" />
-      </div>
-    )
-  }
+import store from './store/store'
+
+const theme = createMuiTheme({})
+
+export default props => {
+  return (
+    <Provider store={store}>
+      <CroodsProvider baseUrl={'https://reqres.in/'}>
+        <MuiThemeProvider theme={theme}>
+          <New
+            name="payment"
+            render={({ create, creating, error }) => {
+              return (
+                <Grid container justify="center">
+                  <PaymentForm
+                    create={create}
+                    creating={creating}
+                    error={error}
+                  />
+                </Grid>
+              )
+            }}
+          />
+        </MuiThemeProvider>
+      </CroodsProvider>
+    </Provider>
+  )
 }
