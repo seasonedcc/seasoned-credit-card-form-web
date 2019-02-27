@@ -1,4 +1,4 @@
-import { cardNumber, cardExpiry } from '../validations'
+import { cardNumber, cardExpiry, cardBrand } from '../validations'
 
 it('show invalid card message', () => {
   const error = cardNumber('123123')
@@ -32,5 +32,20 @@ it('show invalid expiry message', () => {
 
 it('show no error message', () => {
   const error = cardExpiry('10/2029')
+  expect(error).toBeUndefined()
+})
+
+it('show no error message about brand', () => {
+  const error = cardBrand()('5555444433331111')
+  expect(error).toBeUndefined()
+})
+
+it('show brand not accepted error', () => {
+  const error = cardBrand(['visa'])('5555444433331111')
+  expect(error).toEqual('Bandeira não aceita')
+})
+
+it('does NOT show brand not accepted error', () => {
+  const error = cardBrand(['visa'])('4242424242424242')
   expect(error).toBeUndefined()
 })
