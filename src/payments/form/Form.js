@@ -77,7 +77,9 @@ export default class extends Component {
         {this.renderFields()}
         {error && <Error>{error}</Error>}
         {submitting && <Loading style={{ alignSelf: 'center' }} />}
-        <Button disabled={submitting} />
+        <Button
+          disabled={submitting || Object.entries(this.props.errors).length > 0}
+        />
       </Form>
     )
   }
