@@ -2,7 +2,7 @@
 
 > A formik credit card form to speed up the development
 
-[![NPM](https://img.shields.io/npm/v/seasoned-credit-card-form-web.svg)](https://www.npmjs.com/package/seasoned-credit-card-form-web) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![NPM](https://img.shields.io/npm/v/seasoned-credit-card-form-web.svg)](https://www.npmjs.com/package/seasoned-credit-card-form-web) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com) [![Maintainability](https://api.codeclimate.com/v1/badges/674f93386bbf5608aa6b/maintainability)](https://codeclimate.com/github/SeasonedSoftware/seasoned-credit-card-form-web/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/674f93386bbf5608aa6b/test_coverage)](https://codeclimate.com/github/SeasonedSoftware/seasoned-credit-card-form-web/test_coverage)
 
 ## Install
 
