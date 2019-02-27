@@ -14,13 +14,23 @@ npm install --save seasoned-credit-card-form-web
 
 ```jsx
 import React, { Component } from 'react'
+import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles'
+import { PaymentForm } from 'seasoned-credit-card-form-web'
+import 'react-credit-cards/es/styles-compiled.css'
 
-import MyComponent from 'seasoned-credit-card-form-web'
+const theme = createMuiTheme({})
 
-class Example extends Component {
+const Example = props => {
   render () {
     return (
-      <MyComponent />
+      <MuiThemeProvider theme={theme}>
+        <PaymentForm
+          onSubmit={(values) => doSomething(values)}
+          submitting={false}
+          error={serverError}
+          acceptedCards={['visa', 'amex', 'elo', 'mastercard', 'diners', 'hipercard']}
+        />
+      </MuiThemeProvider>
     )
   }
 }

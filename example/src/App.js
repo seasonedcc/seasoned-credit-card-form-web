@@ -25,6 +25,7 @@ export default props => {
                     onSubmit={create}
                     submitting={creating}
                     error={error}
+                    acceptedCards={['visa', 'amex']}
                   />
                 </Grid>
               )

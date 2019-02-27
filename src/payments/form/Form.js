@@ -73,6 +73,7 @@ export default class extends Component {
             cvc={values.cvc}
             focused={this.state.focused}
             placeholders={{ name: 'Seu nome' }}
+            acceptedCards={this.props.acceptedCards}
           />
         </div>
         {this.renderFields()}
