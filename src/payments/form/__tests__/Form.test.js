@@ -21,6 +21,7 @@ const props = {
   handleChange: jest.fn(),
   errors: {},
   touched: {},
+  language: 'en-US',
 }
 
 const tree = renderer.create(<Form {...props} values={values} />)

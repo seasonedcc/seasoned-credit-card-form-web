@@ -60,20 +60,25 @@ export default class extends Component {
   }
 
   render() {
-    const { error, submitting, values, buttonMessage, errors } = this.props
+    const { error, submitting, values } = this.props
+    const { buttonMessage, errors, language } = this.props
     const disabled = submitting || Object.entries(errors).length > 0
+    const cardProps =
+      language === 'pt-BR'
+        ? {
+            locale: { valid: 'valido até' },
+            placeholders: { name: 'Seu nome' },
+          }
+        : {}
 
     return (
       <Form>
         <div>
           <Cards
-            number={values.number}
-            name={values.name}
-            expiry={values.expiry}
-            cvc={values.cvc}
+            {...values}
             focused={this.state.focused}
-            placeholders={{ name: 'Seu nome' }}
             acceptedCards={this.props.acceptedCards}
+            {...cardProps}
           />
         </div>
         {this.renderFields()}

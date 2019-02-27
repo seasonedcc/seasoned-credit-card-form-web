@@ -31,7 +31,7 @@ exports[`renders correctly with one card 1`] = `
           <div
             className="rccs__name"
           >
-            Seu nome
+            YOUR NAME HERE
           </div>
           <div
             className="rccs__expiry"
@@ -88,7 +88,7 @@ exports[`renders correctly with one card 1`] = `
       errors={Object {}}
       fullWidth={true}
       handleChange={[MockFunction]}
-      label="Nome impresso no cartão de crédito"
+      label="Name on Card"
       name="name"
       onFocus={[Function]}
       touched={Object {}}
@@ -101,7 +101,7 @@ exports[`renders correctly with one card 1`] = `
       errors={Object {}}
       fullWidth={true}
       handleChange={[MockFunction]}
-      label="Número do cartão de crédito"
+      label="Credit Card Number"
       mask="9999 9999 9999 9999"
       name="number"
       onFocus={[Function]}
@@ -114,7 +114,7 @@ exports[`renders correctly with one card 1`] = `
     <div
       errors={Object {}}
       handleChange={[MockFunction]}
-      label="Data de expiração"
+      label="Expiry Date"
       mask="99/99"
       name="expiry"
       onFocus={[Function]}
@@ -128,7 +128,7 @@ exports[`renders correctly with one card 1`] = `
     <div
       errors={Object {}}
       handleChange={[MockFunction]}
-      label="Código de segurança"
+      label="CVC"
       mask="9999"
       maskChar=""
       name="cvc"

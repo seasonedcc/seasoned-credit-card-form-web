@@ -1,7 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-<div>
+<div
+  errors={Object {}}
+  handleChange={[MockFunction]}
+  language="en-US"
+  touched={Object {}}
+  values={
+    Object {
+      "cvc": "",
+      "expiry": "",
+      "name": "",
+      "number": "",
+    }
+  }
+>
   Form
 </div>
 `;
