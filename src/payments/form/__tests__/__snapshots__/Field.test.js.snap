@@ -7,20 +7,11 @@ exports[`renders correctly with errors 1`] = `
 >
   <div>
     <div
-      autoFocus={undefined}
       component={[Function]}
-      disabled={undefined}
       error={true}
       id="abc"
-      inputComponent={undefined}
       inputProps={Object {}}
       name="abc"
-      onBlur={undefined}
-      onChange={undefined}
-      onFocus={undefined}
-      placeholder={undefined}
-      type={undefined}
-      value={undefined}
     >
       Field
     </div>
@@ -37,19 +28,11 @@ exports[`renders correctly with errors 1`] = `
       htmlFor="abc"
     />
     <div
-      autoFocus={undefined}
       component={[Function]}
       error={true}
       id="abc"
-      inputComponent={undefined}
       inputProps={Object {}}
       name="abc"
-      onBlur={undefined}
-      onChange={undefined}
-      onFocus={undefined}
-      placeholder={undefined}
-      type={undefined}
-      value={undefined}
     >
       Field
     </div>
@@ -69,20 +52,9 @@ exports[`renders correctly without errors 1`] = `
 >
   <div>
     <div
-      autoFocus={undefined}
       component={[Function]}
-      disabled={undefined}
       error={false}
-      id={undefined}
-      inputComponent={undefined}
       inputProps={Object {}}
-      name={undefined}
-      onBlur={undefined}
-      onChange={undefined}
-      onFocus={undefined}
-      placeholder={undefined}
-      type={undefined}
-      value={undefined}
     >
       Field
     </div>
@@ -91,22 +63,11 @@ exports[`renders correctly without errors 1`] = `
     <label
       className="MuiFormLabel-root-16 MuiInputLabel-root-5 MuiInputLabel-formControl-10 MuiInputLabel-animated-13"
       data-shrink={false}
-      htmlFor={undefined}
     />
     <div
-      autoFocus={undefined}
       component={[Function]}
       error={false}
-      id={undefined}
-      inputComponent={undefined}
       inputProps={Object {}}
-      name={undefined}
-      onBlur={undefined}
-      onChange={undefined}
-      onFocus={undefined}
-      placeholder={undefined}
-      type={undefined}
-      value={undefined}
     >
       Field
     </div>
