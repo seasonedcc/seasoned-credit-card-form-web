@@ -5,10 +5,10 @@ export default (
 ) => props => values => {
   const errors = {}
   const validations = createValidations(props)
-  const translations = createTranslations()
+  const translations = createTranslations(props)
 
   for (let field in validations) {
-    const value = normalizeField ? normalizeField(values[field]) : values[field]
+    const value = normalizeField(values[field])
     const errorsValue = validations[field]
       .map(validateField => {
         const message = validateField(value, values)
