@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+Array [
+  <div
+    autoFocus={true}
+    foo="bar"
+    fullWidth={true}
+    name="name"
+    value=""
+  >
+    Field - 
+    name
+  </div>,
+  <div
+    foo="bar"
+    fullWidth={true}
+    mask=""
+    name="number"
+    value=""
+  >
+    Field - 
+    number
+  </div>,
+  <div
+    foo="bar"
+    mask="99/99"
+    name="expiry"
+    placeholder="MM/AA"
+    value=""
+  >
+    Field - 
+    expiry
+  </div>,
+  <div
+    foo="bar"
+    mask="9999"
+    maskChar=""
+    name="cvc"
+    placeholder="123"
+    value=""
+  >
+    Field - 
+    cvc
+  </div>,
+]
+`;

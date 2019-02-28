@@ -3,40 +3,56 @@ import renderer from 'react-test-renderer'
 
 import Form from '../Form'
 
-jest.mock('../Field', () => props => <div {...props}>Field</div>)
+jest.mock('../FormFields', () => props => <div {...props}>Form Fields</div>)
+jest.mock('../Button', () => props => <div {...props}>Button</div>)
+jest.mock('../Card', () => props => <div {...props}>Card</div>)
 
-jest.mock('formik', () => ({
-  Form: props => <div {...props}>{props.children}</div>,
-  Field: props => <div {...props}>{props.children}</div>,
-}))
+describe('Before submit', () => {
+  it('renders correctly before fill form', () => {
+    const props = {
+      submitting: false,
+      buttonMessage: 'Pay',
+      error: undefined,
+      errors: {},
+    }
+    const tree = renderer.create(<Form {...props} />)
+    expect(tree.toJSON()).toMatchSnapshot()
+  })
 
-const values = {
-  name: '',
-  number: '',
-  expiry: '',
-  cvc: '',
-}
-
-const props = {
-  handleChange: jest.fn(),
-  errors: {},
-  touched: {},
-  language: 'en-US',
-}
-
-const tree = renderer.create(<Form {...props} values={values} />)
-it('renders correctly with one card', () => {
-  expect(tree.toJSON()).toMatchSnapshot()
+  it('renders button disabled when there are validation errors', () => {
+    const props = {
+      submitting: false,
+      buttonMessage: 'Pay',
+      error: undefined,
+      errors: { number: 'number invalid' },
+    }
+    const tree = renderer.create(<Form {...props} />)
+    const { disabled } = tree.root.findByProps({ text: 'Pay' }).props
+    expect(disabled).toBeTruthy()
+  })
 })
 
-it('constructor puts focused as a state property', () => {
-  expect(tree.getInstance().state).toHaveProperty('focused')
-})
+describe('After submit', () => {
+  it('renders correctly while loading', () => {
+    const props = {
+      submitting: true,
+      buttonMessage: 'Pay',
+      error: undefined,
+      errors: {},
+    }
 
-it('binded onFocus change his state', () => {
-  const target = { id: 'powpow' }
-  let instance = tree.getInstance()
-  expect(instance.state.focused).toEqual('')
-  instance.onFocus({ target })
-  expect(instance.state.focused).toEqual(target.id)
+    const tree = renderer.create(<Form {...props} />)
+    expect(tree.toJSON()).toMatchSnapshot()
+  })
+
+  it('renders correctly when occurs a server error', () => {
+    const props = {
+      submitting: false,
+      buttonMessage: 'Pay',
+      error: 'submit failed',
+      errors: {},
+    }
+    const tree = renderer.create(<Form {...props} />)
+    expect(tree.toJSON()).toMatchSnapshot()
+  })
 })

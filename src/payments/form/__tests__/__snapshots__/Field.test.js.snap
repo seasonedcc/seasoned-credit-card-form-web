@@ -12,6 +12,7 @@ exports[`renders correctly with errors 1`] = `
       id="abc"
       inputProps={Object {}}
       name="abc"
+      type="text"
     >
       Field
     </div>
@@ -33,6 +34,7 @@ exports[`renders correctly with errors 1`] = `
       id="abc"
       inputProps={Object {}}
       name="abc"
+      type="text"
     >
       Field
     </div>
@@ -55,6 +57,7 @@ exports[`renders correctly without errors 1`] = `
       component={[Function]}
       error={false}
       inputProps={Object {}}
+      type="text"
     >
       Field
     </div>
@@ -68,6 +71,7 @@ exports[`renders correctly without errors 1`] = `
       component={[Function]}
       error={false}
       inputProps={Object {}}
+      type="text"
     >
       Field
     </div>

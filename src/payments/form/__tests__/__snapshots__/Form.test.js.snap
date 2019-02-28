@@ -1,79 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders correctly with one card 1`] = `
-<div>
-  <div>
-    <div
-      className="rccs"
-    >
-      <div
-        className="rccs__card rccs__card--unknown"
-      >
-        <div
-          className="rccs__card--front"
-        >
-          <div
-            className="rccs__card__background"
-          />
-          <div
-            className="rccs__issuer"
-          />
-          <div
-            className="rccs__cvc__front"
-          >
-            
-          </div>
-          <div
-            className="rccs__number"
-          >
-            •••• •••• •••• ••••
-          </div>
-          <div
-            className="rccs__name"
-          >
-            YOUR NAME HERE
-          </div>
-          <div
-            className="rccs__expiry"
-          >
-            <div
-              className="rccs__expiry__valid"
-            >
-              valid thru
-            </div>
-            <div
-              className="rccs__expiry__value"
-            >
-              ••/••
-            </div>
-          </div>
-          <div
-            className="rccs__chip"
-          />
-        </div>
-        <div
-          className="rccs__card--back"
-        >
-          <div
-            className="rccs__card__background"
-          />
-          <div
-            className="rccs__stripe"
-          />
-          <div
-            className="rccs__signature"
-          />
-          <div
-            className="rccs__cvc"
-          >
-            
-          </div>
-          <div
-            className="rccs__issuer"
-          />
-        </div>
-      </div>
-    </div>
+exports[`After submit renders correctly when occurs a server error 1`] = `
+<form>
+  <div
+    buttonMessage="Pay"
+    error="submit failed"
+    errors={Object {}}
+    submitting={false}
+  >
+    Card
   </div>
   <div
     className="MuiGrid-container-1 MuiGrid-justify-xs-space-between-20"
@@ -84,92 +19,147 @@ exports[`renders correctly with one card 1`] = `
     }
   >
     <div
-      autoFocus={true}
+      buttonMessage="Pay"
+      error="submit failed"
       errors={Object {}}
-      fullWidth={true}
-      handleChange={[MockFunction]}
-      label="Name on Card"
-      name="name"
-      onFocus={[Function]}
-      touched={Object {}}
-      type="text"
-      value=""
+      submitting={false}
     >
-      Field
+      Form Fields
     </div>
-    <div
-      errors={Object {}}
-      fullWidth={true}
-      handleChange={[MockFunction]}
-      label="Credit Card Number"
-      mask="9999 9999 9999 9999"
-      name="number"
-      onFocus={[Function]}
-      touched={Object {}}
-      type="text"
-      value=""
+  </div>
+  <div
+    style={
+      Object {
+        "padding": 20,
+        "textAlign": "center",
+      }
+    }
+  >
+    <h5
+      className="MuiTypography-root-108 MuiTypography-h5-124 MuiTypography-colorError-142"
     >
-      Field
+      submit failed
+    </h5>
+  </div>
+  <div
+    className="MuiGrid-container-1 MuiGrid-justify-xs-center-18"
+  >
+    <div
+      disabled={false}
+      text="Pay"
+    >
+      Button
     </div>
+  </div>
+</form>
+`;
+
+exports[`After submit renders correctly while loading 1`] = `
+<form>
+  <div
+    buttonMessage="Pay"
+    errors={Object {}}
+    submitting={true}
+  >
+    Card
+  </div>
+  <div
+    className="MuiGrid-container-1 MuiGrid-justify-xs-space-between-20"
+    style={
+      Object {
+        "margin": "30px 0",
+      }
+    }
+  >
     <div
+      buttonMessage="Pay"
       errors={Object {}}
-      handleChange={[MockFunction]}
-      label="Expiry Date"
-      mask="99/99"
-      name="expiry"
-      onFocus={[Function]}
-      placeholder="MM/AA"
-      touched={Object {}}
-      type="text"
-      value=""
+      submitting={true}
     >
-      Field
+      Form Fields
     </div>
+  </div>
+  <div
+    style={
+      Object {
+        "alignSelf": "center",
+        "textAlign": "center",
+      }
+    }
+  >
     <div
-      errors={Object {}}
-      handleChange={[MockFunction]}
-      label="CVC"
-      mask="9999"
-      maskChar=""
-      name="cvc"
-      onFocus={[Function]}
-      placeholder="Ex: 123"
-      touched={Object {}}
-      type="text"
-      value=""
+      className="MuiCircularProgress-root-98 MuiCircularProgress-colorPrimary-101 MuiCircularProgress-indeterminate-100"
+      role="progressbar"
+      style={
+        Object {
+          "height": 40,
+          "width": 40,
+        }
+      }
     >
-      Field
+      <svg
+        className="MuiCircularProgress-svg-103"
+        viewBox="22 22 44 44"
+      >
+        <circle
+          className="MuiCircularProgress-circle-104 MuiCircularProgress-circleIndeterminate-106"
+          cx={44}
+          cy={44}
+          fill="none"
+          r={20.2}
+          strokeWidth={3.6}
+          style={Object {}}
+        />
+      </svg>
     </div>
   </div>
   <div
     className="MuiGrid-container-1 MuiGrid-justify-xs-center-18"
   >
-    <button
-      className="MuiButtonBase-root-124 MuiButton-root-98 MuiButton-contained-109 MuiButton-containedPrimary-110 MuiButton-raised-112 MuiButton-raisedPrimary-113"
-      disabled={false}
-      onBlur={[Function]}
-      onContextMenu={[Function]}
-      onFocus={[Function]}
-      onKeyDown={[Function]}
-      onKeyUp={[Function]}
-      onMouseDown={[Function]}
-      onMouseLeave={[Function]}
-      onMouseUp={[Function]}
-      onTouchEnd={[Function]}
-      onTouchMove={[Function]}
-      onTouchStart={[Function]}
-      tabIndex="0"
-      type="submit"
+    <div
+      disabled={true}
+      text="Pay"
     >
-      <span
-        className="MuiButton-label-99"
-      >
-        Finalizar
-      </span>
-      <span
-        className="MuiTouchRipple-root-127"
-      />
-    </button>
+      Button
+    </div>
   </div>
-</div>
+</form>
+`;
+
+exports[`Before submit renders correctly before fill form 1`] = `
+<form>
+  <div
+    buttonMessage="Pay"
+    errors={Object {}}
+    submitting={false}
+  >
+    Card
+  </div>
+  <div
+    className="MuiGrid-container-1 MuiGrid-justify-xs-space-between-20"
+    style={
+      Object {
+        "margin": "30px 0",
+      }
+    }
+  >
+    <div
+      buttonMessage="Pay"
+      errors={Object {}}
+      submitting={false}
+    >
+      Form Fields
+    </div>
+  </div>
+  <div
+    className="MuiGrid-container-1 MuiGrid-justify-xs-center-18"
+  >
+    <div
+      disabled={false}
+      text="Pay"
+    >
+      Button
+    </div>
+  </div>
+</form>
 `;

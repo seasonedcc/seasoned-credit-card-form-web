@@ -25,7 +25,7 @@ export default props => {
       <Media query="(max-width: 425px)">
         <Fragment>
           <Field
-            type={props.type}
+            type={props.type || 'text'}
             name={name}
             onChange={props.handleChange}
             onBlur={props.handleBlur}
@@ -51,7 +51,7 @@ export default props => {
         <Fragment>
           <InputLabel htmlFor={name}>{props.label}</InputLabel>
           <Field
-            type={props.type}
+            type={props.type || 'text'}
             name={name}
             onChange={props.handleChange}
             onBlur={props.handleBlur}
