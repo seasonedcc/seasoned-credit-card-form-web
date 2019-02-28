@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  initialValues={
+    Object {
+      "cvc": "",
+      "expiry": "",
+      "name": "",
+      "number": "",
+    }
+  }
+  onSubmit={[MockFunction]}
+  validate={[Function]}
+>
+  Formik - 
+  <div
+    foo="bar"
+    initialValues={
+      Object {
+        "cvc": "",
+        "expiry": "",
+        "name": "",
+        "number": "",
+      }
+    }
+    language="en-US"
+    onSubmit={[MockFunction]}
+    submitting={false}
+    validate={[Function]}
+  >
+    FormContainer
+  </div>
+</div>
+`;
