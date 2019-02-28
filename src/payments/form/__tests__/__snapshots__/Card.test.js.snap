@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`with en-US as language renders correctly 1`] = `
+<div
+  acceptedCards={
+    Array [
+      "visa",
+    ]
+  }
+  focused=""
+>
+   Cards 
+</div>
+`;
+
+exports[`with pt-BR as language renders correctly 1`] = `
+<div
+  acceptedCards={
+    Array [
+      "visa",
+    ]
+  }
+  focused=""
+  locale={
+    Object {
+      "valid": "valido até",
+    }
+  }
+  placeholders={
+    Object {
+      "name": "Seu nome",
+    }
+  }
+>
+   Cards 
+</div>
+`;
