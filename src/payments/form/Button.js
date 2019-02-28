@@ -1,7 +1,9 @@
 import React from 'react'
+import PropTypes from 'prop-types'
+
 import { Button } from '@material-ui/core'
 
-export default ({ disabled, text = 'Finalizar', ...props }) => (
+const CustomButtom = ({ disabled, text, ...props }) => (
   <Button
     variant="contained"
     color="primary"
@@ -12,3 +14,13 @@ export default ({ disabled, text = 'Finalizar', ...props }) => (
     {text}
   </Button>
 )
+
+CustomButtom.defaultProps = {
+  text: 'Pay',
+}
+
+CustomButtom.propTypes = {
+  disabled: PropTypes.bool.isRequired,
+}
+
+export default CustomButtom
