@@ -29,8 +29,18 @@ PaymentForm.propTypes = {
   onSubmit: PropTypes.func.isRequired,
   submitting: PropTypes.bool.isRequired,
   error: PropTypes.string,
-  acceptedCards: PropTypes.arrayOf(String),
-  language: PropTypes.string,
+  acceptedCards: PropTypes.arrayOf(
+    PropTypes.oneOf([
+      'visa',
+      'amex',
+      'elo',
+      'mastercard',
+      'diners',
+      'hipercard',
+    ]),
+  ),
+  language: PropTypes.oneOf(['en-US', 'pt-BR']),
+  buttonMessage: PropTypes.string,
 }
 
 export default PaymentForm
