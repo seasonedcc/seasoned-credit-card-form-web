@@ -2,10 +2,10 @@ import React from 'react'
 import { Formik } from 'formik'
 import PropTypes from 'prop-types'
 
-import renderForm from './form/render'
+import FormContainer from './form/FormContainer'
 import validate from './form/validate'
 
-const PaymentForm = ({ onSubmit, submitting, error, ...props }) => {
+const PaymentForm = ({ onSubmit, ...props }) => {
   return (
     <Formik
       initialValues={{
@@ -16,7 +16,7 @@ const PaymentForm = ({ onSubmit, submitting, error, ...props }) => {
       }}
       validate={validate(props)}
       onSubmit={onSubmit}
-      render={renderForm({ ...props, submitting, error })}
+      render={options => <FormContainer {...props} {...options} />}
     />
   )
 }
