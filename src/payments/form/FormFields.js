@@ -1,40 +1,48 @@
 import React, { Fragment } from 'react'
-import filter from 'lodash/filter'
 
 import Field from './Field'
-import fields from './fields'
+import { labels, numberMask } from './fieldsHelper'
 
-export default props => {
-  const commonProperties = ({
-    touched,
-    errors,
-    handleChange,
-    handleBlur,
-    setFieldValue,
-    onFocus,
-  }) => ({
-    touched,
-    errors,
-    handleChange,
-    handleBlur,
-    setFieldValue,
-    onFocus,
-  })
+export default ({ language, values, ...props }) => {
   return (
     <Fragment>
-      {filter(fields(props)).map(element => {
-        return (
-          <Field
-            key={element.name}
-            type={element.type || 'text'}
-            value={props.values[element.name]}
-            {...element}
-            {...commonProperties({
-              ...props,
-            })}
-          />
-        )
-      })}
+      <Field
+        {...props}
+        key={'name'}
+        value={values.name}
+        label={labels[language].name}
+        name={'name'}
+        fullWidth
+        autoFocus
+      />
+      <Field
+        {...props}
+        key={'number'}
+        value={values.number}
+        label={labels[language].number}
+        name={'number'}
+        mask={numberMask(values.number)}
+        fullWidth
+      />
+      <Field
+        {...props}
+        key={'expiry'}
+        value={values.expiry}
+        label={labels[language].expiry}
+        name={'expiry'}
+        mask={'99/99'}
+        placeholder={'MM/AA'}
+      />
+      <Field
+        {...props}
+        key={'cvc'}
+        value={values.cvc}
+        label={labels[language].cvc}
+        name={'cvc'}
+        mask={'9999'}
+        maskChar={''}
+        placeholder={'123'}
+      />
     </Fragment>
   )
 }
