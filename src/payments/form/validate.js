@@ -26,7 +26,7 @@ const createValidations = ({ acceptedCards = [] }) => ({
   cvc: [required(), length({ msg: errorMessages.invalidCvc, min: 3, max: 4 })],
 })
 
-const createTranslations = ({ language = 'en-US' }) =>
+const createTranslations = ({ language }) =>
   language === 'pt-BR'
     ? {
         [errorMessages.required]: 'Campo obrigatório',

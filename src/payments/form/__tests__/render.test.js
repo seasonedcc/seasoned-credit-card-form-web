@@ -10,6 +10,8 @@ jest.mock('formik', () => ({
   Field: props => <div {...props}>Field</div>,
 }))
 
+jest.mock('../Form', () => props => <div {...props}>Form</div>)
+
 const values = {
   name: '',
   number: '',
@@ -22,6 +24,7 @@ const formikProps = {
   handleChange: jest.fn(),
   errors: {},
   touched: {},
+  language: 'en-US',
 }
 
 const props = {}
