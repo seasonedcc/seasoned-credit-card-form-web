@@ -1,6 +1,6 @@
 {
   "name": "seasoned-credit-card-form-web",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "A formik credit card form to speed up the development",
   "author": "giovanisleite",
   "license": "MIT",
