@@ -49,6 +49,7 @@ exports[`After submit renders correctly when occurs a server error 1`] = `
     <div
       disabled={false}
       text="Pay"
+      type="submit"
     >
       Button
     </div>
@@ -123,6 +124,7 @@ exports[`After submit renders correctly while loading 1`] = `
     <div
       disabled={true}
       text="Pay"
+      type="submit"
     >
       Button
     </div>
@@ -163,6 +165,7 @@ exports[`Before submit renders correctly before fill form 1`] = `
     <div
       disabled={false}
       text="Pay"
+      type="submit"
     >
       Button
     </div>
