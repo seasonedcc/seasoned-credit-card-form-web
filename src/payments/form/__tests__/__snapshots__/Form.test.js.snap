@@ -6,6 +6,7 @@ exports[`After submit renders correctly when occurs a server error 1`] = `
     buttonMessage="Pay"
     error="submit failed"
     errors={Object {}}
+    renderButton={[Function]}
     submitting={false}
   >
     Card
@@ -22,6 +23,7 @@ exports[`After submit renders correctly when occurs a server error 1`] = `
       buttonMessage="Pay"
       error="submit failed"
       errors={Object {}}
+      renderButton={[Function]}
       submitting={false}
     >
       Form Fields
@@ -59,6 +61,7 @@ exports[`After submit renders correctly while loading 1`] = `
   <div
     buttonMessage="Pay"
     errors={Object {}}
+    renderButton={[Function]}
     submitting={true}
   >
     Card
@@ -74,6 +77,7 @@ exports[`After submit renders correctly while loading 1`] = `
     <div
       buttonMessage="Pay"
       errors={Object {}}
+      renderButton={[Function]}
       submitting={true}
     >
       Form Fields
@@ -131,6 +135,7 @@ exports[`Before submit renders correctly before fill form 1`] = `
   <div
     buttonMessage="Pay"
     errors={Object {}}
+    renderButton={[Function]}
     submitting={false}
   >
     Card
@@ -146,6 +151,7 @@ exports[`Before submit renders correctly before fill form 1`] = `
     <div
       buttonMessage="Pay"
       errors={Object {}}
+      renderButton={[Function]}
       submitting={false}
     >
       Form Fields
