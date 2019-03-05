@@ -21,7 +21,7 @@ const PresentationalForm = props => {
       </Grid>
       {error && <Error>{error}</Error>}
       {submitting && <Loading style={{ alignSelf: 'center' }} />}
-      {renderButton({ text: buttonMessage, disabled })}
+      {renderButton({ type: 'submit', text: buttonMessage, disabled })}
     </Form>
   )
 }
